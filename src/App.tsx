@@ -1,6 +1,7 @@
 import {
   ArrowUpRight,
   BookOpen,
+  Bot,
   BriefcaseBusiness,
   CheckCircle2,
   Code2,
@@ -22,7 +23,6 @@ const links = {
   email: 'mailto:matiscornia0@gmail.com',
   github: 'https://github.com/Matitisco/iManager',
   imanager: 'https://i-manager-ai-studio.vercel.app',
-  imanagerRailway: 'https://imanager-production.up.railway.app/',
   tn: 'https://tn.com.ar/tecno/aplicaciones/2025/07/26/estudiantes-crearon-transferime-una-ia-en-whatsapp-que-simplifica-los-pagos-a-psicologos/',
   youtube: 'https://www.youtube.com/watch?v=w9o0AZCsxFc',
   instagram: 'https://www.instagram.com/transferime__',
@@ -31,11 +31,12 @@ const links = {
 
 const featuredWork = [
   {
+    signal: '01',
     eyebrow: 'UTNLABS / Fintech AI',
     title: 'Transferime',
     description:
-      'Chatbot de WhatsApp para recordatorios de pago, seguimiento de clientes y automatización de cobros para psicólogos.',
-    impact: 'Seleccionado en UTNLABS y cubierto por TV, radio y medios digitales.',
+      'WhatsApp AI agent for payment reminders, client tracking and automated collections for psychologists.',
+    impact: 'Selected by UTNLABS and covered by TV, radio and digital press.',
     tags: ['WhatsApp', 'n8n', 'External APIs', 'Payments'],
     links: [
       { label: 'Nota TN', href: links.tn, icon: Newspaper },
@@ -43,11 +44,12 @@ const featuredWork = [
     ],
   },
   {
+    signal: '02',
     eyebrow: 'Public project / TypeScript',
     title: 'iManager',
     description:
-      'Sistema de gestión de equipos con demo pública y repositorio abierto; foco en operaciones, claridad y flujo de trabajo.',
-    impact: 'Producto deployado, código público y usable como caso técnico.',
+      'Team management system with public demo and open repository, focused on operations and workflow clarity.',
+    impact: 'Deployed product, public code and a concrete technical case.',
     tags: ['TypeScript', 'Product UI', 'Operations'],
     links: [
       { label: 'Demo', href: links.imanager, icon: ArrowUpRight },
@@ -55,20 +57,22 @@ const featuredWork = [
     ],
   },
   {
+    signal: '03',
     eyebrow: 'Freelance / Real businesses',
     title: 'AI chatbots & automations',
     description:
-      'Bots para tiendas de iPhone y agencia de viajes, desplegados en WhatsApp e Instagram para ventas, soporte y reservas.',
-    impact: 'Integraciones con Google Sheets, PostgreSQL, ManyChat, n8n y APIs en tiempo real.',
+      'Bots for iPhone stores and a travel agency, deployed on WhatsApp and Instagram for sales, support and bookings.',
+    impact: 'Integrated Google Sheets, PostgreSQL, ManyChat, n8n and real-time APIs.',
     tags: ['ManyChat', 'PostgreSQL', 'Lead qualification'],
     links: [{ label: 'Contactar', href: links.linkedin, icon: BriefcaseBusiness }],
   },
   {
+    signal: '04',
     eyebrow: 'Private case / Retail systems',
     title: 'Joyero ERP',
     description:
-      'Caso privado de software comercial para ordenar procesos internos, inventario y operación diaria en retail.',
-    impact: 'Incluido como experiencia de producto sin exponer repos privados ni datos sensibles.',
+      'Private retail software case for internal processes, inventory and daily commercial operations.',
+    impact: 'Shown as product experience without exposing private repositories or sensitive data.',
     tags: ['ERP', 'Retail', 'Workflow systems'],
     links: [{ label: 'Pedir contexto', href: links.email, icon: Mail }],
   },
@@ -78,17 +82,17 @@ const experience = [
   {
     date: 'Apr 2025 - Nov 2025',
     title: 'Participant & Developer - Transferime in UTNLABS',
-    body: 'Selected participant in UTN’s Entrepreneurship Center program. Construí el chatbot, automatizaciones con n8n e integraciones externas para payment reminders y client tracking.',
+    body: "Selected participant in UTN's Entrepreneurship Center program. Built the chatbot, n8n automations and external API integrations for payment reminders and client tracking.",
   },
   {
     date: 'Oct 2025 - Apr 2026',
     title: 'AI Chatbot & Automation Developer - Freelance',
-    body: 'Lancé chatbots para comercios y turismo: ventas, soporte, calificación de leads, consultas de vuelos, cotizaciones y reservas.',
+    body: 'Launched chatbots for commerce and travel: sales, support, lead qualification, flight inquiries, quotes and reservation workflows.',
   },
   {
     date: '2020 - 2027',
     title: 'Systems Engineering - UTN FRBA',
-    body: '4th year. Base fuerte en sistemas, programación, datos y pensamiento de producto aplicado a negocios reales.',
+    body: '4th year. Strong base in systems, programming, data and product thinking applied to real business problems.',
   },
 ];
 
@@ -112,29 +116,37 @@ const stack = [
 const pressLinks = [
   {
     title: 'Transferime en TN',
-    meta: 'Nota digital sobre una IA para WhatsApp que simplifica pagos a psicólogos.',
+    meta: 'Digital coverage about an AI for WhatsApp that simplifies payments for psychologists.',
     href: links.tn,
     icon: Newspaper,
   },
   {
     title: 'Entrevista en Telefe / UTN Labs',
-    meta: 'Aparición del proyecto y el proceso de construcción en medios.',
+    meta: 'Media appearance about the project and the way it was built.',
     href: links.youtube,
     icon: Radio,
   },
   {
     title: 'Transferime en Instagram',
-    meta: 'Producto, updates y canal público del proyecto.',
+    meta: 'Public product channel with updates and context.',
     href: links.instagram,
     icon: Sparkles,
   },
 ];
 
+const metrics = [
+  { value: '04', label: 'UTN FRBA year' },
+  { value: 'B2-C1', label: 'English' },
+  { value: 'AI', label: 'Chatbots + APIs' },
+];
+
 function App() {
   return (
     <main className="site-shell">
-      <div className="grain" aria-hidden="true" />
-      <nav className="topbar" aria-label="Navegación principal">
+      <div className="grid-noise" aria-hidden="true" />
+      <div className="scanline" aria-hidden="true" />
+
+      <nav className="topbar" aria-label="Navegacion principal">
         <a className="brandmark" href="#top" aria-label="Volver al inicio">
           MT
         </a>
@@ -149,12 +161,14 @@ function App() {
         <div className="hero-copy reveal">
           <p className="kicker">
             <MapPin size={16} aria-hidden="true" />
-            Buenos Aires, Argentina
+            Buenos Aires / AI product lab
           </p>
-          <h1 id="hero-title">Matías José Tiscornia</h1>
+          <h1 id="hero-title">
+            Matias Jose <span>Tiscornia</span>
+          </h1>
           <p className="hero-lede">
-            Systems Engineering student at UTN FRBA building AI chatbots,
-            automations and API-powered products for real businesses.
+            Systems Engineering student at UTN FRBA building conversational systems, API
+            automations and data-driven products for real businesses.
           </p>
           <div className="hero-actions" aria-label="Acciones principales">
             <a className="button primary" href={links.linkedin} target="_blank" rel="noreferrer">
@@ -163,7 +177,7 @@ function App() {
             </a>
             <a className="button secondary" href={links.cv} target="_blank" rel="noreferrer">
               <Download size={18} aria-hidden="true" />
-              CV sanitizado
+              CV publico
             </a>
             <a className="icon-button" href={links.email} aria-label="Enviar email">
               <Mail size={19} aria-hidden="true" />
@@ -171,40 +185,46 @@ function App() {
           </div>
         </div>
 
-        <div className="hero-visual reveal delay-1" aria-label="Retrato y resumen profesional">
-          <div className="portrait-frame">
-            <img className="portrait-photo" src="/matias-avatar.jpg" alt="Retrato de Matías José Tiscornia" />
-            <span className="visual-code">n8n - APIs - WhatsApp</span>
-            <div className="team-strip">
-              <img src="/transferime-team.webp" alt="Equipo de Transferime en UTNLABS" />
-            </div>
-            <div className="portrait-badge">
-              <Cpu size={18} aria-hidden="true" />
-              AI / Automation
+        <div className="command-deck reveal delay-1" aria-label="Retrato y resumen profesional">
+          <div className="deck-header">
+            <span>Live signal</span>
+            <span>Portfolio v2</span>
+          </div>
+          <div className="profile-console">
+            <img className="portrait-photo" src="/matias-avatar.jpg" alt="Retrato de Matias Jose Tiscornia" />
+            <div className="console-copy">
+              <span className="mono-label">Current vector</span>
+              <strong>AI agents for money, leads and operations.</strong>
             </div>
           </div>
-          <div className="signal-panel">
-            <div>
-              <span className="mono-label">CURRENT SIGNAL</span>
-              <strong>Conversational systems that move money, leads and operations.</strong>
-            </div>
-            <CheckCircle2 size={22} aria-hidden="true" />
+          <div className="system-map" aria-hidden="true">
+            <span className="node node-a">WhatsApp</span>
+            <span className="node node-b">n8n</span>
+            <span className="node node-c">APIs</span>
+            <span className="node node-d">Postgres</span>
+          </div>
+          <div className="team-strip">
+            <img src="/transferime-team.webp" alt="Equipo de Transferime en UTNLABS" />
+          </div>
+          <div className="deck-footer">
+            <span>
+              <Cpu size={17} aria-hidden="true" />
+              Automation layer
+            </span>
+            <span>
+              <CheckCircle2 size={17} aria-hidden="true" />
+              Real clients
+            </span>
           </div>
         </div>
 
-        <aside className="hero-facts reveal delay-2" aria-label="Datos rápidos">
-          <div>
-            <span>04</span>
-            <p>UTN FRBA year</p>
-          </div>
-          <div>
-            <span>B2-C1</span>
-            <p>English</p>
-          </div>
-          <div>
-            <span>AI</span>
-            <p>Chatbots + APIs</p>
-          </div>
+        <aside className="metric-row reveal delay-2" aria-label="Datos rapidos">
+          {metrics.map((metric) => (
+            <div key={metric.label}>
+              <span>{metric.value}</span>
+              <p>{metric.label}</p>
+            </div>
+          ))}
         </aside>
       </section>
 
@@ -214,21 +234,22 @@ function App() {
             <BriefcaseBusiness size={16} aria-hidden="true" />
             Featured work
           </p>
-          <h2 id="work-title">Productos reales, no demos sueltas.</h2>
+          <h2 id="work-title">A product board for things that actually shipped.</h2>
           <p>
-            Una mezcla de startup, sistemas internos y automatizaciones para negocios que necesitan
-            operar mejor.
+            Startup work, internal systems and automation projects arranged like signals in an
+            operating dashboard.
           </p>
         </div>
 
         <div className="work-grid">
-          {featuredWork.map((item, index) => (
-            <article className={`work-card work-card-${index + 1}`} key={item.title}>
+          {featuredWork.map((item) => (
+            <article className="work-card" key={item.title}>
+              <div className="card-index">{item.signal}</div>
               <p className="mono-label">{item.eyebrow}</p>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               <strong>{item.impact}</strong>
-              <div className="tag-row" aria-label={`Tecnologías de ${item.title}`}>
+              <div className="tag-row" aria-label={`Tecnologias de ${item.title}`}>
                 {item.tags.map((tag) => (
                   <span key={tag}>{tag}</span>
                 ))}
@@ -255,16 +276,17 @@ function App() {
             <Workflow size={16} aria-hidden="true" />
             Experience
           </p>
-          <h2 id="experience-title">Donde se cruza ingeniería, producto y negocio.</h2>
+          <h2 id="experience-title">Where engineering meets product pressure.</h2>
           <p>
-            Me interesa la zona donde un sistema conversa con usuarios, toca datos reales y termina
-            empujando una operación.
+            I like the zone where a system talks to users, touches real data and pushes an operation
+            forward.
           </p>
         </div>
 
         <div className="timeline">
-          {experience.map((item) => (
+          {experience.map((item, index) => (
             <article className="timeline-item" key={item.title}>
+              <span className="timeline-pulse">{String(index + 1).padStart(2, '0')}</span>
               <time>{item.date}</time>
               <h3>{item.title}</h3>
               <p>{item.body}</p>
@@ -279,9 +301,9 @@ function App() {
             <TerminalSquare size={16} aria-hidden="true" />
             Stack
           </p>
-          <h2 id="stack-title">Herramientas que uso para construir.</h2>
+          <h2 id="stack-title">Tools I use to make the machine useful.</h2>
         </div>
-        <div className="skill-cloud" aria-label="Habilidades técnicas">
+        <div className="skill-cloud" aria-label="Habilidades tecnicas">
           {stack.map((skill) => (
             <span key={skill}>{skill}</span>
           ))}
@@ -295,8 +317,8 @@ function App() {
             Education & languages
           </p>
           <h2 id="proof-title">UTN FRBA, Systems Engineering.</h2>
-          <p>4th year · 2020 - 2027</p>
-          <p>Spanish native · English B2-C1</p>
+          <p>4th year / 2020 - 2027</p>
+          <p>Spanish native / English B2-C1</p>
         </div>
 
         <div className="press-panel">
@@ -323,13 +345,13 @@ function App() {
       <footer id="contact" className="contact-section" aria-labelledby="contact-title">
         <div>
           <p className="kicker">
-            <Code2 size={16} aria-hidden="true" />
+            <Bot size={16} aria-hidden="true" />
             Contact
           </p>
-          <h2 id="contact-title">¿Construimos algo que tenga pulso?</h2>
+          <h2 id="contact-title">Build something with a working heartbeat.</h2>
           <p>
-            Estoy abierto a oportunidades tech donde IA, automatización y producto se mezclen con
-            problemas reales.
+            Open to tech opportunities where AI, automation and product thinking meet real business
+            problems.
           </p>
         </div>
         <div className="contact-actions">
@@ -346,7 +368,7 @@ function App() {
             CV
           </a>
         </div>
-        <p className="signature">Built by Matías · React, TypeScript, Vite · 2026</p>
+        <p className="signature">Built by Matias / React, TypeScript, Vite / 2026</p>
       </footer>
     </main>
   );
